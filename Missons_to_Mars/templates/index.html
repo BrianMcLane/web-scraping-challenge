@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mission to Mars</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="jumbotron text-center">
+      <h1>Mission to Mars</h1>
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data!</a></p>
+    </div>
+    
+    <h2>Lastest Mars News</h2>
+    <h3>{{ webitems['1']['title'] }}</h3>
+    <p>{{ webitems['1']['article'] }}</p>
+
+    <div class="row">
+      <div class="col-md-8">
+        <h2>Featured Mars Image</h2>
+            <img src="{{ webitems['2']['link'] }}" alt="Mars Pic">
+      </div>
+      <div class="col-md-4">
+        <h2>Mars Facts</h2>
+        
+        <p>  {{ webitems['3']|safe }} </p>
+
+      </div>  
+    </div>  
+
+    <div class="row text-center">
+      <h3>Mars Hemispheres</h3>
+    </div>
+    <div class="row">
+      <div class="col-md-3">
+        
+        <img width="260" height="260" src="{{ webitems['4'] }}" alt="Cerb">
+        <h4>Cerberus Hemisphere Enhanced</h4>
+      </div>
+    
+      <div class="col-md-3">
+        
+        <img width="260" height="260"  src="{{ webitems['5'] }}" alt="Schi">
+        <h4>Schiaparelli Hemishpere Enhanced</h4>
+      </div>
+
+      <div class="col-md-3">
+        
+        <img width="260" height="260"  src="{{ webitems['6'] }}" alt="Syrt">
+        <h4>Syrtis Major Hemisphere Enhanced</h4>
+      </div>
+    
+      <div class="col-md-3">
+        
+        <img width="260" height="260"  src="{{ webitems['7'] }}" alt="Vall">
+        <h4>Valles Marineris Hemisphere Enhanced</h4>
+      </div>
+    </div>
+    
+    
+  </div>
+</body>
+
+</html>
